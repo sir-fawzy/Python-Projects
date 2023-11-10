@@ -37,8 +37,6 @@ def blackjack_or_bust(hand):
     else:
         return None
 
-
-# Write all of your part 2A code below this comment. DO NOT CHANGE OR REMOVE THIS COMMENT.
 def play_dealer_turn():
     hand_value = 0
     counter = 0
@@ -69,7 +67,6 @@ def play_dealer_turn():
         print(f"Final hand: {hand_value}.")
 
 
-# Write all of your part 2B code below this comment. DO NOT CHANGE OR REMOVE THIS COMMENT.
 def play_human_turn():
     hand_value = 0
     starting = 0
