@@ -16,7 +16,8 @@ from wtforms.validators import InputRequired
 
 #How to use flask(python) to control buttons in html
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'supersecretkey'
+
+app.config['SECRET_KEY'] = 'secretkey'
 app.config['UPLOAD_FOLDER'] = 'statics/files'
 global files
 files = ""
