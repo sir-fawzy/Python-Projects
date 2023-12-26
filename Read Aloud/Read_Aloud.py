@@ -11,10 +11,9 @@ from wtforms import FileField, SubmitField
 from werkzeug.utils import secure_filename
 from wtforms.validators import InputRequired
 
-#get the user to upload the pdf file
-#ask the user to type the name of the file
 
-#How to use flask(python) to control buttons in html
+
+
 
 
 def speak(text):
@@ -22,7 +21,7 @@ def speak(text):
     audio_filename = "voice.mp3"
     tts.save(audio_filename)
     playsound.playsound(audio_filename)
-def main():
+def readout():
     text = extract_text("./statics/files/file")
     os.remove("./statics/files/file")
     with open("Text.csv", "w") as file:
@@ -46,11 +45,8 @@ def main():
     #to read aloud the conent of the pdf file that have now been  transfered to the csv file
     with open("Text.csv") as file:
         reader = csv.reader(file)
-
         stack =[]
         
-        
-
         for row in reader:
             rows =[]
             ref_checker = ""
@@ -105,7 +101,7 @@ def home():
         file = form.file.data # First grab the file
         file.filename = "file"
         file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'],secure_filename(file.filename))) # Then save the file
-        main()
+        readout()
         
         
     return render_template('index.html', form=form)
