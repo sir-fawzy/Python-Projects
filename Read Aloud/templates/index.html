@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     
     <title>Home</title>
+    <style>
+        .heading{
+            background-color: rgba(245, 245, 220, 0.5);
+            border-radius: 10px;
+            text-align: center;
+            font-size: medium;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .body_style{
+            background-color:azure; 
+        }
+        .body{
+            align-items: center;
+            text-align: center;
+            align-content: center;
+            padding: 15%;
+        }
+    </style>
 </head>
-<body>
-    <h1>Upload the file you want to Read Aloud!</h1>
+<body class="body_style">
+    <div class="heading" c;><h1>Upload the pdf file you want to Read Aloud!</h1></div>
 
+   <div class="body"><div style="background-color: rgba(0, 127, 255, 0.1); border-radius: 10px; padding: 100px;">
     <form method='POST' enctype='multipart/form-data'>
         {{form.hidden_tag()}}
         {{form.file()}}
         {{form.submit()}}
-    </form>
+    </form></div></div>
 </body>
 </html>

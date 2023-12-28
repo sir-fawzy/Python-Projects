@@ -11,7 +11,8 @@ from wtforms import FileField, SubmitField
 from werkzeug.utils import secure_filename
 from wtforms.validators import InputRequired
 
-
+#How to use flask(python) to control buttons in html
+#Add functionailty of using a button to do control c 
 
 
 
